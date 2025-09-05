@@ -18,11 +18,9 @@ const events = [
         category: "Meetup",
     },
 ];
-
-// GET /api/events/[id]
 export async function GET(
     req: Request,
-    { params }: {  params: { id: string } }
+    { params }: { params: { id: string } }
 ) {
     const event = events.find((e) => e.id === Number(params.id));
 
